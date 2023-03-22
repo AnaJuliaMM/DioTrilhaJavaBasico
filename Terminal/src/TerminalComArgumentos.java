@@ -1,6 +1,5 @@
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.spi.LocaleNameProvider;
 
 class TerminalComArgumento{
     public static void main(String[] args) {
@@ -22,5 +21,7 @@ class TerminalComArgumento{
         System.out.println(sobrenome);
         System.out.println("Tenho " + idade+ " anos" );
         System.out.println("Minha altura é " + altura+"cm ");
+
+        scanner.close();
     }
 }
