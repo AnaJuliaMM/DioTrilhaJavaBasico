@@ -1,5 +1,3 @@
-package controlefluxo;
-
 import java.util.Scanner;
 
 public class Contador{
