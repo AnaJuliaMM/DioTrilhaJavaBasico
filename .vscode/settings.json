@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "ContaBanco"
+        "ContaBanco",
+        "Contador/src"
     ]
 }
