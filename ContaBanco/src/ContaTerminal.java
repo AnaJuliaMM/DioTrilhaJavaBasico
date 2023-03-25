@@ -1,4 +1,3 @@
-package src;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -10,6 +9,7 @@ class ContaTerminal{
          // Exibir as mensagens para o usuário e obter pela scanner os valores digitados no terminal
          System.out.println("Olá, digite o número da conta, por favor:");
          int numero = scanner.nextInt();
+         scanner.nextLine();
  
          System.out.println("Por favor, digite o número da agência:");
          String agencia = scanner.next();
