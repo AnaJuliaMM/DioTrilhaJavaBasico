@@ -25,7 +25,7 @@ public class Contador{
         if(parametro1>parametro2){
             throw new ParametrosInvalidosException();
         }
-        for(int i= parametro1;i<parametro2; i++){
+        for(int i= parametro1;i<=parametro2; i++){
             System.out.println("Imprimindo o número " + i);
         }
     }
