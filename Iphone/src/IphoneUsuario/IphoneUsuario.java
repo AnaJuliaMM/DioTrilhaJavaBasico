@@ -9,31 +9,29 @@ public class IphoneUsuario {
 
 	public static void main(String[] args) {
 		
-		Iphone iphone = new Iphone();
+		Iphone iphone = new Iphone(); 
 		
-		System.out.println("-Funcoes Reprodutor Musical:\n");
-		iphone.selecionarMusica();
-		iphone.tocar();
-		iphone.pausar();
-		
-		System.out.println("\n-Funcoes Aparelho Telefonico:\n");
-		iphone.ligar();
-		iphone.atender();
-		iphone.iniciarCorreioVoz();
-		
-		System.out.println("\n-Funcoes Navegador de Internet:\n");
-		iphone.adicionarNovaAba();
-		iphone.atualizarPagina();
-		iphone.exibirPagina();
-		
-		
+		//Referenciando e instanciando
 		ReprodutorMusicial reprodutorMusical = iphone;
 		AparelhoTelefonico aparelhoTelefonico = iphone;
 		NavegadorInternet  navegadorInternet = iphone;
 		
+		reprodutorMusical.selecionarMusica();  
+		reprodutorMusical.tocar();
+		reprodutorMusical.pausar();
+		
+		aparelhoTelefonico.atender();
+		aparelhoTelefonico.ligar();
+		aparelhoTelefonico.iniciarCorreioVoz();
+		
+		navegadorInternet.adicionarNovaAba();
+		navegadorInternet.atualizarPagina();
+		navegadorInternet.exibirPagina();
 		
 		
+			
 		
-	}
+		
 
+	}
 }

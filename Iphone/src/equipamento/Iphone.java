@@ -6,13 +6,13 @@ import interfaces.ReprodutorMusicial;
 public class Iphone implements AparelhoTelefonico, NavegadorInternet, ReprodutorMusicial{
 	
 	public void selecionarMusica() {
-		System.out.println("Selecionando música para tocar no Iphone");
+		System.out.println("SELECTED- Selecionando musica para tocar no Iphone");
 	}
 	public void tocar() {
-		System.out.println("Tocando música no Iphone");	
+		System.out.println("PLAY-Tocando musica no Iphone");	
 	}
 	public void pausar() {
-		System.out.println(">pausando a música do Iphone<");	
+		System.out.println("PAUSE-pausando a música do Iphone<");	
 	}
 
 	public void adicionarNovaAba() {
