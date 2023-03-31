@@ -1,7 +1,7 @@
 package contaModelo;
-
 import cliente.Cliente;
 import contaInterface.IConta;
+import contas.ContaCorrente;
 
 public abstract class Conta implements IConta {
 	
@@ -40,7 +40,6 @@ public abstract class Conta implements IConta {
 		System.out.println(String.format("Titular: %s\n", this.cliente.getNome()));
 
 	}
-	
 	public int getAgencia() {
 		return agencia;
 	}
@@ -52,6 +51,11 @@ public abstract class Conta implements IConta {
 	}
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
+	}
+
+	@Override
+	public String toString() {
+		return "\n agencia=" + agencia + "\n numero=" + numero + "\n saldo=" + saldo + "\n cliente=" + cliente + "\n";
 	}
 	
 	

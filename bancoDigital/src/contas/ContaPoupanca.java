@@ -3,9 +3,9 @@ package contas;
 import cliente.Cliente;
 import contaModelo.Conta;
 
-public class ContaPoupança extends Conta {
+public class ContaPoupanca extends Conta {
 
-	public ContaPoupança(Cliente cliente) {
+	public ContaPoupanca(Cliente cliente) {
 		super(cliente);
 		// TODO Auto-generated constructor stub
 	}

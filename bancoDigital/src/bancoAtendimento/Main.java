@@ -1,34 +1,78 @@
 package bancoAtendimento;
-
-import java.util.ArrayList;
-
 import banco.Banco;
 import cliente.Cliente;
 import contaModelo.Conta;
 import contas.ContaCorrente;
-import contas.ContaPoupança;
+import contas.ContaPoupanca;
 
-public class Main {
-
-	@SuppressWarnings("null")
+public class Main{
 	public static void main(String[] args) {
-		ArrayList<Cliente> clientes = null;
-	
-		Cliente anaJulia = new Cliente();
-		anaJulia.setNome("Ana Julia");
-		Cliente Joao = new Cliente();
-		Joao.setNome("Joao");
-	
 		
-		Conta cc = new ContaCorrente(anaJulia);
-		Conta poupanca = new ContaPoupança(anaJulia);
+		Banco inter = new Banco("Inter");
 		
-		cc.depositar(100.00);
-		cc.transfirir(100.00, poupanca);
+		Cliente anaJulia = new Cliente("Ana Julia");
+		anaJulia.cadastrarBanco(inter);
 		
-		cc.imprimirExtrato();
-		poupanca.imprimirExtrato();
+		Cliente joao = new Cliente("Joao");
+		joao.cadastrarBanco(inter);
+		
+		Conta ccAnaJulia = new ContaCorrente(anaJulia);
+		inter.adicionarContaCorrentes(ccAnaJulia);
+		Conta poupancaJoao = new ContaPoupanca(joao);
+		inter.adicionarContaPoupanca(poupancaJoao);
+		Conta poupancaAnaJulia = new ContaPoupanca(anaJulia);
+		inter.adicionarContaPoupanca(poupancaAnaJulia);
+		
+		
+		ccAnaJulia.depositar(100.00);
+		ccAnaJulia.transfirir(50.00, poupancaJoao);
+		ccAnaJulia.transfirir(50, poupancaAnaJulia);
+		
+		ccAnaJulia.imprimirExtrato();
+		poupancaAnaJulia.imprimirExtrato();
+		poupancaJoao.imprimirExtrato();
+		
+		inter.listarClientes();
+		inter.listarContasCorrentes();
+		inter.listarContasPoupancas();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 	}
 
 }
+
+/*
+
+		
+		
+		anaJulia.cadastrarBanco(inter);
+		
+		
+		
+		
+		;
+		
+		
+		
+		
+		
+		
+		
+		
+*/

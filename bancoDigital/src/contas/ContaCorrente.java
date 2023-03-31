@@ -1,5 +1,4 @@
 package contas;
-
 import cliente.Cliente;
 import contaModelo.Conta;
 
@@ -14,7 +13,7 @@ public class ContaCorrente extends Conta{
 		System.out.println("****** Extrato Conta Corrente *******");
 		imprimirAtributosComuns();
 	}
-
+	
 
 	
 
